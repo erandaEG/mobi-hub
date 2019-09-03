@@ -1,4 +1,4 @@
-# mobi-hub-
+# mobi-hub™
 
 A web application (local-host) that finds a best smartphone for a
 given budget through sentiment analysis of smartphone consumer reviews.
