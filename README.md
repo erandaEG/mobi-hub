@@ -5,6 +5,6 @@ given budget through sentiment analysis of smartphone consumer reviews.
 
 HIGHLIGHTS
 
-Languages: HTML (JSP), Java (Servlets)
-Web-Scraping Tool: jsoup
+Languages: HTML (JSP), Java (Servlets),
+Web-Scraping Tool: jsoup,
 Sentiment-Analysis Algorithm: Naïve-Bayes Classifier
