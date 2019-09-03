@@ -1,0 +1,438 @@
+/*
+====body styling starts====
+*/
+body{
+    background-color: gainsboro;
+}
+/*
+====body styling starts====
+*/
+
+
+
+/*
+====best-selection-section styling starts====
+*/
+.best-selection-section{
+    margin-top: 200px;
+    background-color: #999;
+    padding: 20px
+}
+/*
+====best-selection-section styling starts====
+*/
+
+
+
+/*
+====best-selection-details styling starts====
+*/
+.best-selection-details{
+    height: 620px;
+    color: black;
+    box-shadow: 0 3px 10px;
+    background-color: white;
+    padding-top: 50px;
+}
+
+.specs-container{
+    width: 100%;
+}
+
+.specs-container .specs{
+    display: block;
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.specs-container .specs:first-child{
+    border-right: 1px solid #EEEEEE;
+}
+
+.specs-container .specs:nth-child(2){
+    border-right: 1px solid #EEEEEE;
+}
+
+.specs-container .specs:last-child{
+    border-left: 1px solid #EEEEEE;
+}
+
+.specs-container .specs h4{
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.specs-container .specs p{
+    color: #777777;
+}
+
+@media(max-width:991px){
+    .best-selection-details{
+        margin-top: 10%;
+    }
+}
+/*
+====best-selection-details styling ends====
+*/
+
+
+/*
+====rotating-card styling starts====
+*/
+.btn:hover,
+.btn:focus,
+.btn:active{
+    outline: 0 !important;
+}
+
+/* entire container, keeps perspective */
+.card-container {
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800;
+}
+
+/* flip the pane when hovered */
+.card-container:not(.manual-flip):hover .card,
+.card-container.hover.manual-flip .card{
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.card-container:not(.manual-flip):hover .card,
+.card-container.hover.manual-flip .card .back{
+    box-shadow: 0 3px 10px 3px rgb(255,223,0),
+        0 3px 20px 3px rgb(255,223,0),
+        0 3px 30px 3px rgb(255,223,0),
+        0 3px 75px 3px rgba(255,223,0, 0.05),
+        0 3px 60px 3px rgba(255,223,0, 0.05),
+        0 3px 45px 3px rgba(255,223,0, 0.05),
+        0 3px 30px 3px rgba(255,223,0, 0.05),
+        0 3px 15px 3px rgba(255,223,0, 0.05);
+}
+.card-container.static:hover .card,
+.card-container.static.hover .card {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+/* flip speed goes here */
+.card {
+    -webkit-transition: -webkit-transform .5s;
+    -moz-transition: -moz-transform .5s;
+    -o-transition: -o-transform .5s;
+    transition: transform .5s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    box-shadow: 0 2px 10px 3px rgb(255,223,0);
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    background-color: #D4AF37;
+}
+
+/* back, initially hidden pane */
+.back {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+    z-index: 3;
+    background-color: #999;
+}
+.back .btn-simple{
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+}
+
+/* card styles */
+.card{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 4px;
+    color: #444444;
+}
+.card-container, .front, .back {
+    width: 100%;
+    height: 620px;
+    border-radius: 4px;
+}
+.imageDiv .image{
+    width: 100%;
+    background-color: white;
+}
+.imageDiv{
+    border-bottom: 1px solid #999;
+}
+.card .content{
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    padding: 10px 20px 20px;
+}
+.card .content .main {
+    min-height: 160px;
+}
+.card .back .content .main {
+    height: 215px;
+}
+.card .name {
+    font-size: 22px;
+    line-height: 28px;
+    margin: 10px 0 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+.card h5{
+    margin: 5px 0;
+    font-weight: 400;
+    line-height: 20px;
+}
+.card .profession{
+    color: #999999;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card .footer {
+    border-top: 1px solid #EEEEEE;
+    color: #999999;
+    margin: 30px 0 0;
+    padding: 10px 0 0;
+    text-align: center;
+}
+.card .footer .social-links{
+    font-size: 18px;
+}
+.card .footer .social-links a{
+    margin: 0 7px;
+}
+.card .footer .btn-simple{
+    margin-top: -6px;
+}
+.card .header {
+    padding: 15px 20px;
+    height: 90px;
+}
+.card .motto{
+    border-bottom: 1px solid #EEEEEE;
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.card .stats-container{
+    width: 100%;
+    margin-top: 50px;
+}
+.card .stats{
+    display: block;
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+.card .stats:first-child{
+    border-right: 1px solid #EEEEEE;
+}
+.card .stats:last-child{
+    border-left: 1px solid #EEEEEE;
+}
+.card .stats h4{
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+.card .stats p{
+    color: #777777;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .front, .back{
+        -ms-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+
+    .back {
+        visibility: hidden;
+        -ms-transition: all 0.2s cubic-bezier(.92,.01,.83,.67);
+    }
+    .front{
+        z-index: 4;
+    }
+    .card-container:not(.manual-flip):hover .back,
+    .card-container.manual-flip.hover .back{
+        z-index: 5;
+        visibility: visible;
+    }
+}
+
+@media (max-width:996px){
+    .imageDiv .image{
+        width: 50%;
+    }
+}
+/*
+====rotating-card styling ends====
+*/
+
+
+
+/*
+====phone-list card styling starts====
+*/
+.phone-list-section{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.phone-list-section .col-sm-3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.phone-list-section .card{
+    box-shadow: 0 3px 10px;
+}
+
+.phone-list-section .card .hovereffect{
+    padding: 20px 0 10px 0;
+    border-bottom: 1px solid #999;
+    height: 250px;
+}
+
+.phone-list-section .card .card-block{
+    padding: 10px 10px 0 10px;
+}
+
+#phone-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#phone-list > div[class*='col-'] {
+    display: flex;
+}
+
+.card-title{
+    color: black;
+}
+
+.card-text{
+    color: black;
+}
+
+.hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+
+.hovereffect .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    top: -200px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 0.1s ease-out 0.5s;
+    transition: all 0.1s ease-out 0.5s;
+}
+
+.hovereffect:hover .overlay {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    top: 0px;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.hovereffect img {
+    display: block;
+    position: relative;
+}
+
+.hovereffect h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-transform: translateY(-200px);
+    -ms-transform: translateY(-200px);
+    transform: translateY(-200px);
+    -webkit-transition: all ease-in-out 0.1s;
+    transition: all ease-in-out 0.1s;
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.hovereffect:hover h2 {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.hovereffect a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    text-transform: uppercase;
+    margin: 50px 0 0 0;
+    background-color: transparent;
+    -webkit-transform: translateY(-200px);
+    -ms-transform: translateY(-200px);
+    transform: translateY(-200px);
+    color: #000;
+    border: 1px solid #000;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+.hovereffect a.info:hover {
+    box-shadow: 0 0 5px #fff;
+}
+
+.hovereffect:hover a.info {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    box-shadow: 0 0 5px #000;
+    color: #000;
+    border: 1px solid #000;
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+/*
+====phone-list card styling ends====
+*/
